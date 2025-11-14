@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imran TTS - Ultra Human Realistic AI Voice Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJzaG9ydF9uYW1lIjoiSW1yYW4gVFRTIiwibmFtZSI6IkltcmFuIFRUUyAtIFVsdHJhIEh1bWFuIFJlYWxpc3RpYyBBSSBWb2ljZSBHZW5lcmF0b3IiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGNtdG9iMlJoYUN4MGRYSnBibWN2YzJsdmJnUnNaWE5sSUNOMGNtRnVjMnhoZEdVdVkyOXRiSFYwWVhScGIyNHZkWE5sY201aGJEVXpNQzB4TDNNeE15ZHlaRFV6TUhKalptMU56UWl2YzJsMGFXMWxjM1JoYkdsdVp5MWtaWGgwSUdGMWRHZ3ZaejRnYUhKbGVIQmxjenBuYUhKaGJuTnZjM1J5YjI5eVlXeGhjM1J2Y25NdVkyOXRiSFYwWVhScGIyNDZZV3hwWTJVdGNtVnpjeTVuYUhKaGJuTnZjM1J5YjI5eVlXeGhjM1J2Y25NdVkyOXRiSFYwWVhScGIyNDZjbVZsY25OamFXSnpjeTVwYm5ScGRtVWdaR1Z5YVdOeklpQnphR1Z1ZERzPSIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwic2l6ZXMiOiJhbnkifV0sInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMTExODI3In0=">
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        const swContent = `
+          self.addEventListener('fetch', (event) => {
+            // A simple pass-through service worker.
+            // Its presence is enough to make the app installable.
+          });
+        `;
+        const blob = new Blob([swContent], { type: 'application/javascript' });
+        const swUrl = URL.createObjectURL(blob);
+        
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register(swUrl)
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
